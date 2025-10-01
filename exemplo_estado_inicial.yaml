@@ -1,0 +1,260 @@
+metadata:
+  timestamp: 0.0
+  active_areas_count: 1
+  total_enemies: 15
+  total_items: 9
+
+player:
+  x: 200.0
+  y: 200.0
+  health: 100
+  max_health: 100
+  health_items: 0
+  ammo_items: 0
+
+areas:
+  - grid_x: 0
+    grid_y: 0
+    active: true
+    enemies:
+      - x: 150.0
+        y: 100.0
+        health: 50
+        max_health: 50
+      - x: 250.0
+        y: 150.0
+        health: 50
+        max_health: 50
+      - x: 100.0
+        y: 250.0
+        health: 50
+        max_health: 50
+    items:
+      - x: 120.0
+        y: 120.0
+        item_type: health
+        symbol: "➕"
+      - x: 280.0
+        y: 180.0
+        item_type: ammo
+        symbol: "⚡"
+      - x: 180.0
+        y: 280.0
+        item_type: health
+        symbol: "➕"
+
+  - grid_x: 1
+    grid_y: 0
+    active: false
+    enemies:
+      - x: 450.0
+        y: 100.0
+        health: 50
+        max_health: 50
+      - x: 550.0
+        y: 150.0
+        health: 50
+        max_health: 50
+    items:
+      - x: 420.0
+        y: 120.0
+        item_type: health
+        symbol: "➕"
+      - x: 580.0
+        y: 180.0
+        item_type: ammo
+        symbol: "⚡"
+
+  - grid_x: 2
+    grid_y: 0
+    active: false
+    enemies:
+      - x: 750.0
+        y: 100.0
+        health: 50
+        max_health: 50
+      - x: 850.0
+        y: 150.0
+        health: 50
+        max_health: 50
+    items:
+      - x: 720.0
+        y: 120.0
+        item_type: health
+        symbol: "➕"
+      - x: 880.0
+        y: 180.0
+        item_type: ammo
+        symbol: "⚡"
+
+  - grid_x: 0
+    grid_y: 1
+    active: false
+    enemies:
+      - x: 150.0
+        y: 400.0
+        health: 50
+        max_health: 50
+      - x: 250.0
+        y: 450.0
+        health: 50
+        max_health: 50
+    items:
+      - x: 120.0
+        y: 420.0
+        item_type: health
+        symbol: "➕"
+      - x: 280.0
+        y: 480.0
+        item_type: ammo
+        symbol: "⚡"
+
+  - grid_x: 1
+    grid_y: 1
+    active: false
+    enemies:
+      - x: 450.0
+        y: 400.0
+        health: 50
+        max_health: 50
+      - x: 550.0
+        y: 450.0
+        health: 50
+        max_health: 50
+    items:
+      - x: 420.0
+        y: 420.0
+        item_type: health
+        symbol: "➕"
+      - x: 580.0
+        y: 480.0
+        item_type: ammo
+        symbol: "⚡"
+
+  - grid_x: 2
+    grid_y: 1
+    active: false
+    enemies:
+      - x: 750.0
+        y: 400.0
+        health: 50
+        max_health: 50
+      - x: 850.0
+        y: 450.0
+        health: 50
+        max_health: 50
+    items:
+      - x: 720.0
+        y: 420.0
+        item_type: health
+        symbol: "➕"
+      - x: 880.0
+        y: 480.0
+        item_type: ammo
+        symbol: "⚡"
+
+  - grid_x: 0
+    grid_y: 2
+    active: false
+    enemies:
+      - x: 150.0
+        y: 700.0
+        health: 50
+        max_health: 50
+      - x: 250.0
+        y: 750.0
+        health: 50
+        max_health: 50
+    items:
+      - x: 120.0
+        y: 720.0
+        item_type: health
+        symbol: "➕"
+      - x: 280.0
+        y: 780.0
+        item_type: ammo
+        symbol: "⚡"
+
+  - grid_x: 1
+    grid_y: 2
+    active: false
+    enemies:
+      - x: 450.0
+        y: 700.0
+        health: 50
+        max_health: 50
+      - x: 550.0
+        y: 750.0
+        health: 50
+        max_health: 50
+    items:
+      - x: 420.0
+        y: 720.0
+        item_type: health
+        symbol: "➕"
+      - x: 580.0
+        y: 780.0
+        item_type: ammo
+        symbol: "⚡"
+
+  - grid_x: 2
+    grid_y: 2
+    active: false
+    enemies:
+      - x: 750.0
+        y: 700.0
+        health: 50
+        max_health: 50
+      - x: 850.0
+        y: 750.0
+        health: 50
+        max_health: 50
+    items:
+      - x: 720.0
+        y: 720.0
+        item_type: health
+        symbol: "➕"
+      - x: 880.0
+        y: 780.0
+        item_type: ammo
+        symbol: "⚡"
+
+config:
+  game:
+    window_width: 1200
+    window_height: 800
+    fps: 60
+    survival_time: 60
+  player:
+    size: 20
+    speed: 200
+    max_health: 100
+    color: [0, 255, 0]
+  enemy:
+    size: 15
+    speed: 100
+    health: 50
+    damage: 10
+    damage_interval: 1.0
+    color: [255, 0, 0]
+  items:
+    health:
+      size: 10
+      heal_amount: 30
+      color: [255, 255, 0]
+      symbol: "➕"
+    ammo:
+      size: 10
+      damage: 25
+      radius: 100
+      color: [0, 255, 255]
+      symbol: "⚡"
+  world:
+    grid_size: 3
+    area_size: 400
+    activation_distance: 50
+    max_active_areas: 4
+  spawn:
+    enemies_per_area: 5
+    health_items_per_area: 2
+    ammo_items_per_area: 1

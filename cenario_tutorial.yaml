@@ -1,0 +1,17 @@
+enemy:
+  damage: 5
+  health: 30
+  speed: 60
+game:
+  survival_time: 30
+player:
+  max_health: 120
+  speed: 150
+spawn:
+  ammo_items_per_area: 2
+  enemies_per_area: 2
+  health_items_per_area: 3
+world:
+  activation_distance: 40
+  area_size: 300
+  max_active_areas: 2

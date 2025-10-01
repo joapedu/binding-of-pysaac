@@ -1,0 +1,82 @@
+# Configuração Melhorada do Binding of Pysaac
+# Sistema de Áreas Ativas 3x3 com Visual Aprimorado
+
+# Configurações da Janela
+window:
+  width: 1200
+  height: 800
+  title: "Binding of Pysaac - Enhanced"
+
+# Configurações do Jogo
+game:
+  fps: 60
+  survival_time: 120  # segundos para sobreviver
+  
+# Configurações do Jogador
+player:
+  size: 20
+  speed: 200
+  max_health: 100
+  color: [0, 255, 0]  # Verde
+  health_items: 3
+  ammo_items: 2
+
+# Configurações dos Inimigos
+enemies:
+  size: 16
+  speed: 80
+  max_health: 50
+  damage: 10
+  color: [255, 0, 0]  # Vermelho
+  spawn_rate: 0.8  # Probabilidade de spawn por área
+
+# Configurações dos Itens
+items:
+  health:
+    size: 12
+    symbol: "➕"
+    heal_amount: 30
+    spawn_rate: 0.3
+    color: [255, 255, 0]  # Amarelo
+  
+  ammo:
+    size: 12
+    symbol: "⚡"
+    damage: 25
+    radius: 80
+    spawn_rate: 0.2
+    color: [0, 255, 255]  # Ciano
+
+# Configurações do Mundo
+world:
+  grid_size: 3  # 3x3 grid
+  area_size: 800  # Tamanho de cada área
+  activation_distance: 200  # Distância para ativar área
+  max_active_areas: 4  # Máximo de áreas ativas
+
+# Configurações de Spawn
+spawn:
+  enemies_per_area: 15  # Inimigos por área
+  health_items_per_area: 5  # Itens de saúde por área
+  ammo_items_per_area: 3  # Itens de munição por área
+
+# Configurações Visuais
+visual:
+  background_color: [20, 20, 20]  # Cor de fundo
+  area_background: [40, 60, 40]   # Cor de fundo das áreas
+  wall_color: [80, 60, 40]        # Cor das paredes
+  floor_color: [60, 80, 60]       # Cor do chão
+  tile_size: 32                   # Tamanho dos tiles
+  
+# Configurações de Partículas
+particles:
+  explosion_count: 10             # Partículas por explosão
+  explosion_lifetime: 1.0        # Tempo de vida das partículas
+  damage_numbers: true           # Mostrar números de dano
+  
+# Configurações de Efeitos
+effects:
+  screen_shake: true             # Tremor da tela
+  damage_flash: true             # Flash de dano
+  health_bar: true               # Barra de vida dos inimigos
+  direction_indicator: true      # Indicador de direção do jogador
