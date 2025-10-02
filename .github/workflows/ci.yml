@@ -263,7 +263,7 @@ jobs:
     
     - name: Análise estática com flake8
       run: |
-        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics --max-line-length=100
+        flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics --max-line-length=100 --ignore=E203,W503
 
   security:
     name: Verificação de Segurança
@@ -292,7 +292,7 @@ jobs:
         bandit -r . -f json -o bandit-report.json || echo "⚠️ Problemas de segurança encontrados no código"
     
     - name: Upload relatório de segurança
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       if: always()
       with:
         name: security-report
