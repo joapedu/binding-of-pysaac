@@ -18,6 +18,6 @@ ignore =
     F401
 per-file-ignores =
     __init__.py:F401
-    tests/*:S101  # assert allowed in tests
+    tests/*:S101
 max-complexity = 10
 select = E,W,F,C
