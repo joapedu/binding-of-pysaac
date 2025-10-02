@@ -23,8 +23,8 @@ items:
     - 0
     - 255
     - 255
-    damage: 100
-    radius: 200
+    damage: 50
+    radius: 150
     size: 10
     symbol: ⚡
   health:

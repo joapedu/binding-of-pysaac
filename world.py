@@ -25,7 +25,7 @@ class Area:
         for _ in range(spawn_config['enemies_per_area']):
             x = random.uniform(self.x + 20, self.x + self.area_size - 20)
             y = random.uniform(self.y + 20, self.y + self.area_size - 20)
-            enemy = Enemy(x, y, self.config['enemies'])
+            enemy = Enemy(x, y, self.config['enemy'])
             self.enemies.append(enemy)
         
         for _ in range(spawn_config['health_items_per_area']):

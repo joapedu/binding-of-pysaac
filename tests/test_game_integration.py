@@ -99,7 +99,7 @@ class TestGameIntegration(unittest.TestCase):
     
     def test_enemy_creation(self):
         """Testa criação de inimigo."""
-        enemy = Enemy(200, 200, self.config['enemies'])
+        enemy = Enemy(200, 200, self.config['enemy'])
         
         self.assertEqual(enemy.x, 200)
         self.assertEqual(enemy.y, 200)
@@ -186,7 +186,7 @@ class TestGameIntegration(unittest.TestCase):
     def test_enemy_pursuit(self):
         """Testa perseguição do inimigo ao jogador."""
         player = Player(100, 100, self.config['player'])
-        enemy = Enemy(200, 200, self.config['enemies'])
+        enemy = Enemy(200, 200, self.config['enemy'])
         
         initial_distance = ((enemy.x - player.x)**2 + (enemy.y - player.y)**2)**0.5
         

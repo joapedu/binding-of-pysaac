@@ -125,7 +125,7 @@ class GameStateManager:
                 
                 area.enemies.clear()
                 for enemy_data in area_data['enemies']:
-                    enemy = Enemy(enemy_data['x'], enemy_data['y'], self.config['enemies'])
+                    enemy = Enemy(enemy_data['x'], enemy_data['y'], self.config['enemy'])
                     enemy.health = enemy_data['health']
                     enemy.max_health = enemy_data['max_health']
                     area.enemies.append(enemy)

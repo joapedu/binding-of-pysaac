@@ -73,8 +73,8 @@ class DynamicAreaManager:
             content['enemies'].append({
                 'x': enemy_x,
                 'y': enemy_y,
-                'health': self.config['enemies']['health'],
-                'max_health': self.config['enemies']['health']
+                'health': self.config['enemy']['health'],
+                'max_health': self.config['enemy']['health']
             })
         
         for _ in range(spawn_config['health_items_per_area']):
@@ -137,7 +137,7 @@ class DynamicAreaManager:
             
             area_data.enemies.clear()
             for enemy_data in content.get('enemies', []):
-                enemy = Enemy(enemy_data['x'], enemy_data['y'], self.config['enemies'])
+                enemy = Enemy(enemy_data['x'], enemy_data['y'], self.config['enemy'])
                 enemy.health = enemy_data['health']
                 enemy.max_health = enemy_data['max_health']
                 area_data.enemies.append(enemy)
@@ -164,7 +164,7 @@ class DynamicAreaManager:
             content = self.generate_area_content(area_data)
             
             for enemy_data in content['enemies']:
-                enemy = Enemy(enemy_data['x'], enemy_data['y'], self.config['enemies'])
+                enemy = Enemy(enemy_data['x'], enemy_data['y'], self.config['enemy'])
                 enemy.health = enemy_data['health']
                 enemy.max_health = enemy_data['max_health']
                 area_data.enemies.append(enemy)

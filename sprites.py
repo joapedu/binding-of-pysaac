@@ -16,8 +16,8 @@ class SpriteRenderer:
             'floor': (60, 80, 60)
         }
         
-        if config and 'enemies' in config:
-            self.colors['enemy'] = tuple(config['enemies']['color'])
+        if config and 'enemy' in config:
+            self.colors['enemy'] = tuple(config['enemy']['color'])
     
     def draw_player(self, screen: pygame.Surface, x: int, y: int, size: int, direction: float = 0):
         """Desenha o jogador com visual melhorado"""

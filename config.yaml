@@ -1,4 +1,4 @@
-enemies:
+enemy:
   color:
   - 255
   - 165
@@ -8,13 +8,9 @@ enemies:
   health: 60
   size: 15
   speed: 120
-enemy:
-  damage: 25
-  health: 40
-  speed: 150
 game:
   fps: 30
-  survival_time: 120
+  survival_time: 90
   window_height: 800
   window_width: 1200
 items:
@@ -40,15 +36,15 @@ player:
   - 0
   - 255
   - 0
-  max_health: 80
+  max_health: 100
   size: 20
-  speed: 250
+  speed: 200
 spawn:
   ammo_items_per_area: 1
-  enemies_per_area: 25
+  enemies_per_area: 8
   health_items_per_area: 1
 world:
-  activation_distance: 120
-  area_size: 600
+  activation_distance: 80
+  area_size: 500
   grid_size: 3
-  max_active_areas: 6
+  max_active_areas: 4
