@@ -1,6 +1,7 @@
 import json
 import yaml
 import random
+import pygame
 from typing import Dict, List, Any
 from entities import Player, Enemy, Item
 
