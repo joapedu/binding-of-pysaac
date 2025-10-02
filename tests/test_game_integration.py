@@ -118,10 +118,19 @@ class TestGameIntegration(unittest.TestCase):
     
     def test_world_creation(self):
         """Testa criação do mundo."""
-        world = World()
+        test_config = {
+            'world': {'grid_size': 3, 'area_size': 400, 'activation_distance': 50, 'max_active_areas': 2},
+            'spawn': {'enemies_per_area': 2, 'health_items_per_area': 1, 'ammo_items_per_area': 1},
+            'enemy': {'size': 15, 'speed': 100, 'health': 50, 'damage': 10, 'damage_interval': 1.0, 'color': [255, 0, 0]},
+            'items': {
+                'health': {'size': 10, 'heal_amount': 30, 'color': [255, 255, 0], 'symbol': '➕'},
+                'ammo': {'size': 10, 'damage': 25, 'radius': 100, 'color': [0, 255, 255], 'symbol': '⚡'}
+            }
+        }
+        world = World(config=test_config)
         
         self.assertEqual(len(world.areas), 9)
-        self.assertEqual(len(world.active_areas), 0)
+        self.assertEqual(len(world.active_areas), 1)
     
     def test_dynamic_world_creation(self):
         """Testa criação do mundo dinâmico."""

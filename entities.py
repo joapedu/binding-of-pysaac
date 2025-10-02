@@ -11,6 +11,10 @@ class Entity:
         self.health = 100
         self.max_health = 100
     
+    @property
+    def alive(self) -> bool:
+        return self.health > 0
+    
     def get_rect(self) -> pygame.Rect:
         return pygame.Rect(self.x - self.size, self.y - self.size, self.size * 2, self.size * 2)
     
@@ -118,6 +122,12 @@ class Item(Entity):
         super().__init__(x, y, config['size'], config['color'])
         self.item_type = item_type
         self.config = config
+        self.health = 1
+        self.max_health = 1
+    
+    @property
+    def symbol(self) -> str:
+        return self.config.get('symbol', '?')
     
     def collect(self, player: Player) -> bool:
         if self.get_rect().colliderect(player.get_rect()):
